@@ -30,7 +30,7 @@ func main() {
 	}
 	defer producer.Close()
 
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 10000; i++ {
 		data, _ := json.Marshal(models.Subscription{
 			APIKey: os.Getenv("KLAVIYO_API_KEY"),
 			Email:  fake.EmailAddress(),
